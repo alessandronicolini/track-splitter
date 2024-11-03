@@ -1,0 +1,27 @@
+{
+  "name": "gpx-split-track-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "nodemon --watch backend/src --ext ts --exec \"ts-node backend/src/index.ts\"",
+    "dev:frontend": "tsc -p frontend/tsconfig.json && node frontend/dist/index.js",
+    "build:frontend": "tsc -p frontend/tsconfig.json",
+    "build:backend": "tsc -p backend/tsconfig.json",
+    "start": "node backend/dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.8.7",
+    "fastify": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/sqlite3": "^3.1.11",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
