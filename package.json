@@ -16,6 +16,7 @@
   "dependencies": {
     "@types/node": "^22.8.7",
     "fastify": "^5.1.0",
+    "leaflet": "^1.9.4",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
