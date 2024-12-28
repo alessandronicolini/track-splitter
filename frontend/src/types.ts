@@ -1,24 +1,20 @@
-interface Coordinates {
-    lat: number,
-    lon: number
-}
+import { LatLngLiteral } from "leaflet";
+
 
 interface Wpt {
-    ele?: number,
     name?: string,
     desc?: string,
     type?: string,
-    coords: Coordinates
+    latLng: LatLngLiteral
 }
 
 type TrkSeg = Wpt[];
-type TrkSegs = TrkSeg[];
 
 interface Trk {
     name?: string,
     desc?: string,
     type?: string,
-    trkSegs: TrkSegs
+    trkSegs: TrkSeg[];
 }
 
 interface Person {
@@ -35,7 +31,7 @@ interface Metadata {
     time: Date
 }
 
-interface Gpx {
+export interface Gpx {
     metadata: Metadata,
     trks: Trk[]
 }
